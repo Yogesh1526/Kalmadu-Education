@@ -1,109 +1,106 @@
 # Madhyamik Vidyalay Kalmadu - School & College Website
 
-A professional, modern website for Madhyamik Vidyalay Kalmadu, a secondary school and college located in Kalmadu village, Jalgaon District, Maharashtra.
+Official website for Madhyamik Vidyalay Kalmadu and Arts College located in Kalmadu village, Chalisgaon Taluka, Jalgaon District, Maharashtra.
 
 ## Features
 
-- **Modern Angular Framework**: Built with Angular 17+ using standalone components
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Professional UI/UX**: Beautiful, modern design with smooth animations
-- **Gallery Section**: Photo and video gallery with category filtering
-- **Contact Form**: Interactive contact form for inquiries
-- **Multiple Sections**: Home, About, Facilities, Gallery, and Contact pages
-
-## Installation
-
-1. Install Node.js (v18 or higher) and npm
-2. Install Angular CLI globally:
-   ```bash
-   npm install -g @angular/cli
-   ```
-3. Install project dependencies:
-   ```bash
-   npm install
-   ```
+- 🎓 Information about Secondary School (Grades 8-10)
+- 🏛️ Details about Arts College (11th & 12th)
+- 📚 Academic information and curriculum
+- 🏫 Facilities and infrastructure details
+- 📸 Gallery with images and videos
+- 📰 News and announcements
+- 📅 Upcoming events
+- 💬 Testimonials
+- 🌐 Bilingual support (English & Marathi)
+- 📱 Fully responsive design
 
 ## Development
 
-Run the development server:
+### Prerequisites
+
+- Node.js (v20 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
 ```bash
 npm start
-# or
-ng serve
 ```
 
-Navigate to `http://localhost:4200/` in your browser.
+Navigate to `http://localhost:4200/`
 
-## Build
+### Build
 
-Build the project for production:
 ```bash
+# Production build
 npm run build
+
+# Build for GitHub Pages
+npm run build:gh-pages
 ```
 
-The build artifacts will be stored in the `dist/` directory.
+## Deployment to GitHub Pages
 
-## Project Structure
+### Option 1: Using GitHub Actions (Recommended)
+
+1. Push your code to the `main` or `master` branch
+2. The GitHub Actions workflow will automatically build and deploy to GitHub Pages
+3. Enable GitHub Pages in your repository settings:
+   - Go to Settings → Pages
+   - Source: GitHub Actions
+
+### Option 2: Manual Deployment
+
+1. Build the project:
+   ```bash
+   npm run build:gh-pages
+   ```
+
+2. Copy `index.html` to `404.html` in the dist folder:
+   ```bash
+   # Windows PowerShell
+   Copy-Item dist\kalmadu-school\browser\index.html dist\kalmadu-school\browser\404.html
+   
+   # Linux/Mac
+   cp dist/kalmadu-school/browser/index.html dist/kalmadu-school/browser/404.html
+   ```
+
+3. Push the contents of `dist/kalmadu-school/browser` to the `gh-pages` branch
+
+## Repository Structure
 
 ```
-src/
-├── app/
-│   ├── components/
-│   │   ├── header/      # Navigation header
-│   │   └── footer/      # Footer component
-│   ├── pages/
-│   │   ├── home/        # Home page
-│   │   ├── about/       # About page
-│   │   ├── facilities/  # Facilities page
-│   │   ├── gallery/     # Gallery page
-│   │   └── contact/     # Contact page
-│   ├── app.component.ts
-│   └── app.routes.ts
-├── assets/              # Static assets
-├── index.html
-├── main.ts
-└── styles.css
+├── src/
+│   ├── app/
+│   │   ├── components/     # Reusable components (Header, Footer)
+│   │   ├── pages/          # Page components
+│   │   ├── services/       # Services (Translation)
+│   │   ├── pipes/          # Custom pipes
+│   │   └── translations/   # Translation data
+│   └── assets/             # Static assets
+├── .github/
+│   └── workflows/          # GitHub Actions workflows
+└── angular.json            # Angular configuration
 ```
-
-## Customization
-
-### Adding Images
-Replace placeholder images in the gallery and other sections with your actual school photos. Update the image URLs in:
-- `src/app/pages/gallery/gallery.component.ts`
-- `src/app/pages/home/home.component.html`
-- Other component files
-
-### Adding Videos
-Update the video embed URLs in `src/app/pages/gallery/gallery.component.ts` with your actual YouTube or video URLs.
-
-### Contact Information
-Update contact details in:
-- `src/app/pages/contact/contact.component.ts`
-- `src/app/components/footer/footer.component.html`
-
-### Google Maps
-Update the Google Maps embed URL in `src/app/pages/contact/contact.component.html` with your actual school location coordinates.
 
 ## Technologies Used
 
 - Angular 17+
 - TypeScript
-- CSS3 (with modern features)
-- Google Fonts (Poppins & Playfair Display)
-- Responsive Grid Layout
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- CSS3
+- HTML5
 
 ## License
 
-This project is created for Madhyamik Vidyalay Kalmadu.
+This project is private and proprietary.
 
-## Support
+## Contact
 
-For any questions or support, please contact the school administration.
-
+For inquiries, please visit the [Contact Page](https://yogesh1526.github.io/Kalmadu-Education/contact) or email: info@kalmaduschool.edu.in
