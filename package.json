@@ -6,9 +6,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:gh-pages": "ng build --base-href /Kalmadu-Education/",
+    "build:gh-pages": "ng build --base-href /Kalmadu-Education/ && node scripts/deploy-gh-pages.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npm run build:gh-pages"
   },
   "private": true,
   "dependencies": {

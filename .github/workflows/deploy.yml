@@ -34,9 +34,6 @@ jobs:
       - name: Build
         run: npm run build:gh-pages
 
-      - name: Copy index.html to 404.html
-        run: cp dist/kalmadu-school/browser/index.html dist/kalmadu-school/browser/404.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

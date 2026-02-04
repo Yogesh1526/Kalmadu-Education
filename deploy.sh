@@ -1,11 +1,22 @@
 #!/bin/bash
 
+echo "Building Angular app for GitHub Pages..."
+
 # Build the Angular app with the correct base href
 npm run build:gh-pages
 
-# Copy index.html to 404.html for GitHub Pages routing
-cp dist/kalmadu-school/browser/index.html dist/kalmadu-school/browser/404.html
+if [ $? -ne 0 ]; then
+    echo "Build failed!"
+    exit 1
+fi
 
+echo ""
 echo "Build complete! Files are in dist/kalmadu-school/browser/"
-echo "Copy these files to your gh-pages branch or deploy via GitHub Actions"
+echo ""
+echo "To deploy manually:"
+echo "1. Copy ALL files from dist/kalmadu-school/browser/ to your gh-pages branch root"
+echo "2. Make sure 404.html exists in the root"
+echo "3. Push to gh-pages branch"
+echo ""
+echo "Or use GitHub Actions for automatic deployment."
 

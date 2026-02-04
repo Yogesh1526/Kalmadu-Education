@@ -1,11 +1,19 @@
 # PowerShell script for Windows deployment
 
+Write-Host "Building Angular app for GitHub Pages..." -ForegroundColor Green
+
 # Build the Angular app with the correct base href
 npm run build:gh-pages
 
-# Copy index.html to 404.html for GitHub Pages routing
-Copy-Item -Path "dist\kalmadu-school\browser\index.html" -Destination "dist\kalmadu-school\browser\404.html"
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Build failed!" -ForegroundColor Red
+    exit 1
+}
 
-Write-Host "Build complete! Files are in dist\kalmadu-school\browser\"
-Write-Host "Copy these files to your gh-pages branch or deploy via GitHub Actions"
+Write-Host "`nBuild complete! Files are in dist\kalmadu-school\browser\" -ForegroundColor Green
+Write-Host "`nTo deploy manually:" -ForegroundColor Yellow
+Write-Host "1. Copy ALL files from dist\kalmadu-school\browser\ to your gh-pages branch root" -ForegroundColor Yellow
+Write-Host "2. Make sure 404.html exists in the root" -ForegroundColor Yellow
+Write-Host "3. Push to gh-pages branch" -ForegroundColor Yellow
+Write-Host "`nOr use GitHub Actions for automatic deployment." -ForegroundColor Cyan
 
