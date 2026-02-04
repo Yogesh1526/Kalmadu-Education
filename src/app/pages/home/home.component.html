@@ -1,0 +1,142 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="container">
+      <h1 class="hero-title">{{ 'home.hero.title' | translate }}</h1>
+      <p class="hero-subtitle">{{ 'home.hero.subtitle' | translate }}</p>
+      <p class="hero-description">{{ 'home.hero.description' | translate }}</p>
+      <div class="hero-buttons">
+        <a routerLink="/about" class="btn btn-primary">{{ 'common.learnMore' | translate }}</a>
+        <a routerLink="/contact" class="btn btn-secondary">{{ 'common.contactUs' | translate }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-shape"></div>
+</section>
+
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" *ngFor="let stat of stats">
+        <div class="stat-icon">{{ stat.icon }}</div>
+        <div class="stat-number">{{ stat.number }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ 'home.about.title' | translate }}</h2>
+      <p>{{ 'home.about.subtitle' | translate }}</p>
+    </div>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop&q=80" alt="School Building" loading="lazy">
+      </div>
+      <div class="about-text">
+        <h3>{{ 'home.about.heading' | translate }}</h3>
+        <p>{{ 'home.about.text1' | translate }}</p>
+        <p>{{ 'home.about.text2' | translate }}</p>
+        <a routerLink="/about" class="btn btn-outline">{{ 'common.readMore' | translate }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ 'home.features.title' | translate }}</h2>
+      <p>{{ 'home.features.subtitle' | translate }}</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ 'home.testimonials.title' | translate }}</h2>
+      <p>{{ 'home.testimonials.subtitle' | translate }}</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="quote-icon">"</div>
+        <p class="testimonial-text">{{ testimonial.text }}</p>
+        <div class="testimonial-author">
+          <h4>{{ testimonial.name }}</h4>
+          <p class="author-role">{{ testimonial.role }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-link">
+      <a routerLink="/testimonials" class="btn btn-outline">{{ 'home.testimonials.viewAll' | translate }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="news-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ 'home.news.title' | translate }}</h2>
+      <p>{{ 'home.news.subtitle' | translate }}</p>
+    </div>
+    <div class="news-grid">
+      <div class="news-card" *ngFor="let news of latestNews">
+        <div class="news-date">{{ news.date | date:'MMM d' }}</div>
+        <h3>{{ news.title }}</h3>
+        <p>{{ news.excerpt }}</p>
+      </div>
+    </div>
+    <div class="section-link">
+      <a routerLink="/news" class="btn btn-outline">{{ 'home.news.readAll' | translate }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="events-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ 'home.events.title' | translate }}</h2>
+      <p>{{ 'home.events.subtitle' | translate }}</p>
+    </div>
+    <div class="events-grid">
+      <div class="event-card" *ngFor="let event of upcomingEvents">
+        <div class="event-date">
+          <span class="date-day">{{ event.date | date:'d' }}</span>
+          <span class="date-month">{{ event.date | date:'MMM' }}</span>
+        </div>
+        <div class="event-info">
+          <h3>{{ event.title }}</h3>
+          <p class="event-location">📍 {{ event.location }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-link">
+      <a routerLink="/events" class="btn btn-outline">{{ 'home.events.viewAll' | translate }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>{{ 'home.cta.title' | translate }}</h2>
+      <p>{{ 'home.cta.description' | translate }}</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-primary btn-large">{{ 'common.getInTouch' | translate }}</a>
+        <a routerLink="/gallery" class="btn btn-secondary btn-large">{{ 'home.cta.gallery' | translate }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,57 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Madhyamik Vidyalay Kalmadu</h3>
+        <p>{{ 'footer.description' | translate }}</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{{ 'footer.quickLinks' | translate }}</h4>
+        <ul>
+          <li><a routerLink="/">{{ 'nav.home' | translate }}</a></li>
+          <li><a routerLink="/about">{{ 'nav.about' | translate }}</a></li>
+          <li><a routerLink="/facilities">{{ 'nav.facilities' | translate }}</a></li>
+          <li><a routerLink="/gallery">{{ 'nav.gallery' | translate }}</a></li>
+          <li><a routerLink="/contact">{{ 'nav.contact' | translate }}</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{{ 'footer.contactInfo' | translate }}</h4>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <span>Kalmadu, Chalisgaon Block<br>Jalgaon District, Maharashtra</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📧</span>
+          <span>info&#64;kalmaduschool.edu.in</span>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <span>+91 XXXXX XXXXX</span>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{{ 'footer.programs' | translate }}</h4>
+        <ul>
+          <li>{{ 'footer.secondarySchool' | translate }}</li>
+          <li>{{ 'footer.artsCollege' | translate }}</li>
+          <li>{{ 'footer.scienceCollege' | translate }}</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} Madhyamik Vidyalay Kalmadu. {{ 'footer.rights' | translate }}</p>
+      <p class="made-with">{{ 'footer.madeWith' | translate }}</p>
+    </div>
+  </div>
+</footer>
+

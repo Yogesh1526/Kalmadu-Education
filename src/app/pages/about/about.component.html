@@ -1,0 +1,105 @@
+<section class="page-header">
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Learn about our mission, vision, and commitment to education</p>
+  </div>
+</section>
+
+<section class="about-main">
+  <div class="container">
+    <div class="about-intro">
+      <div class="intro-content">
+        <h2>Our Story</h2>
+        <p>Madhyamik Vidyalay Kalmadu was established in 2008 with a vision to provide quality education to the children of Kalmadu village and surrounding areas. What started as a secondary school has now grown into a comprehensive educational institution serving students from grade 8 to grade 12.</p>
+        <p>Our journey has been marked by continuous growth and development. We began with secondary education (grades 8-10) and have now expanded to include Arts stream for higher secondary education (grades 11-12). With a new Arts college building currently under construction and plans for a Science college, we are committed to providing diverse educational opportunities to our community.</p>
+        <p>Located in the heart of Kalmadu village, our institution is easily accessible and serves as a beacon of hope and progress for rural education in Maharashtra.</p>
+      </div>
+      <div class="intro-image">
+        <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop" alt="Education" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="school-details">
+  <div class="container">
+    <h2 class="section-title">School Information</h2>
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="detail-icon">📅</div>
+        <h3>Established</h3>
+        <p>{{ schoolInfo.established }}</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">📍</div>
+        <h3>Location</h3>
+        <p>{{ schoolInfo.location }}</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">🏛️</div>
+        <h3>Type</h3>
+        <p>{{ schoolInfo.type }}</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">📖</div>
+        <h3>Medium</h3>
+        <p>{{ schoolInfo.medium }}</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">👥</div>
+        <h3>Gender</h3>
+        <p>{{ schoolInfo.gender }}</p>
+      </div>
+      <div class="detail-card">
+        <div class="detail-icon">🛣️</div>
+        <h3>Accessibility</h3>
+        <p>{{ schoolInfo.accessibility }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs-section">
+  <div class="container">
+    <h2 class="section-title">Our Programs</h2>
+    <div class="programs-grid">
+      <div class="program-card" *ngFor="let program of programs">
+        <div class="program-icon">{{ program.icon }}</div>
+        <h3>{{ program.title }}</h3>
+        <p class="program-grades">{{ program.grades }}</p>
+        <p class="program-description">{{ program.description }}</p>
+        <span class="program-status" [class.coming-soon]="program.status === 'Coming Soon'">{{ program.status }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <h2 class="section-title">Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let value of values">
+        <div class="value-icon">{{ value.icon }}</div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mission-section">
+  <div class="container">
+    <div class="mission-content">
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>To provide quality, accessible education that empowers students from rural backgrounds to achieve their full potential and contribute meaningfully to society.</p>
+        <h2>Our Vision</h2>
+        <p>To become a leading educational institution in rural Maharashtra, recognized for academic excellence, innovative teaching methods, and holistic student development.</p>
+      </div>
+      <div class="mission-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop" alt="Students Learning" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+

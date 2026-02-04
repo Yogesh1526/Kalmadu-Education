@@ -1,0 +1,42 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Upcoming Events</h1>
+    <p>Mark your calendars for these exciting events</p>
+  </div>
+</section>
+
+<section class="events-main">
+  <div class="container">
+    <div class="events-grid">
+      <div class="event-card" *ngFor="let event of upcomingEvents">
+        <div class="event-image">
+          <img [src]="event.image" [alt]="event.title" loading="lazy">
+          <div class="event-category">{{ event.category }}</div>
+          <div class="event-date-badge">
+            <span class="date-day">{{ event.date | date:'d' }}</span>
+            <span class="date-month">{{ event.date | date:'MMM' }}</span>
+          </div>
+        </div>
+        <div class="event-content">
+          <h3>{{ event.title }}</h3>
+          <div class="event-details">
+            <div class="event-detail-item">
+              <span class="detail-icon">📅</span>
+              <span>{{ event.date | date:'EEEE, MMMM d, yyyy' }}</span>
+            </div>
+            <div class="event-detail-item">
+              <span class="detail-icon">🕐</span>
+              <span>{{ event.time }}</span>
+            </div>
+            <div class="event-detail-item">
+              <span class="detail-icon">📍</span>
+              <span>{{ event.location }}</span>
+            </div>
+          </div>
+          <p>{{ event.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

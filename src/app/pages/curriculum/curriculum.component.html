@@ -1,0 +1,53 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Curriculum</h1>
+    <p>Comprehensive and well-structured educational programs</p>
+  </div>
+</section>
+
+<section class="curriculum-main">
+  <div class="container">
+    <div class="curriculum-intro">
+      <h2>Our Curriculum Structure</h2>
+      <p>Our curriculum is designed to provide a balanced education that develops students' intellectual, social, and emotional capabilities. We follow the Maharashtra State Board curriculum while incorporating innovative teaching methods and enrichment programs.</p>
+    </div>
+
+    <div class="curriculum-levels">
+      <div class="level-card" *ngFor="let level of curriculumLevels" [class.coming-soon]="level.comingSoon">
+        <div class="level-header">
+          <h3>{{ level.level }}</h3>
+          <p class="board-name">{{ level.board }}</p>
+          <div class="coming-soon-badge" *ngIf="level.comingSoon">Coming Soon</div>
+        </div>
+        <p class="level-description">{{ level.description }}</p>
+        
+        <div class="subjects-container">
+          <div class="subject-group" *ngFor="let subject of level.subjects">
+            <h4 class="subject-group-title">
+              <span class="subject-icon">📖</span>
+              {{ subject.name }}
+            </h4>
+            <div class="subject-details">
+              <ul class="subject-list">
+                <li *ngFor="let detail of subject.details">{{ detail }}</li>
+              </ul>
+              <div class="subject-hours">{{ subject.hours }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="methodology-section">
+      <h2 class="section-title">Teaching Methodology</h2>
+      <div class="methodology-grid">
+        <div class="methodology-card" *ngFor="let method of teachingMethodology">
+          <div class="method-icon">{{ method.icon }}</div>
+          <h3>{{ method.title }}</h3>
+          <p>{{ method.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

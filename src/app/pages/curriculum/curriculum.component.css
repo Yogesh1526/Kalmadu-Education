@@ -1,0 +1,239 @@
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.curriculum-main {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.curriculum-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.curriculum-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+}
+
+.curriculum-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.curriculum-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.level-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.level-card.coming-soon {
+  opacity: 0.9;
+}
+
+.level-header {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.level-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+}
+
+.board-name {
+  font-size: 1rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.level-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.subjects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subject-group {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.subject-group-title {
+  font-size: 1.3rem;
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subject-icon {
+  font-size: 1.5rem;
+}
+
+.subject-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.subject-list {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+.subject-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #555;
+  line-height: 1.6;
+}
+
+.subject-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.subject-hours {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.methodology-section {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.methodology-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.methodology-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.method-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.methodology-card h3 {
+  font-size: 1.5rem;
+  color: #1e3c72;
+  margin-bottom: 1rem;
+}
+
+.methodology-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .curriculum-intro h2,
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .level-card {
+    padding: 2rem;
+  }
+
+  .subject-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

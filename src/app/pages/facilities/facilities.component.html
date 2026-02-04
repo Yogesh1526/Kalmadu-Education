@@ -1,0 +1,88 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Our Facilities</h1>
+    <p>Modern infrastructure and amenities for quality education</p>
+  </div>
+</section>
+
+<section class="facilities-main">
+  <div class="container">
+    <div class="facilities-intro">
+      <h2>Infrastructure & Amenities</h2>
+      <p>At Madhyamik Vidyalay Kalmadu, we believe that quality infrastructure is essential for effective learning. Our facilities are designed to provide a comfortable, safe, and conducive environment for students to excel academically and develop holistically.</p>
+      <p>From well-equipped classrooms to recreational spaces, we ensure that every aspect of our infrastructure supports the educational journey of our students.</p>
+    </div>
+
+    <div class="facilities-grid">
+      <div class="facility-card" *ngFor="let facility of facilities">
+        <div class="facility-image">
+          <img [src]="facility.image" [alt]="facility.title" loading="lazy">
+          <div class="facility-overlay">
+            <div class="facility-icon">{{ facility.icon }}</div>
+          </div>
+        </div>
+        <div class="facility-content">
+          <h3>{{ facility.title }}</h3>
+          <p>{{ facility.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="infrastructure-section">
+  <div class="container">
+    <h2 class="section-title">Infrastructure Overview</h2>
+    <div class="infrastructure-stats">
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Classrooms</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Library Books</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Separate Toilets</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Playground</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="future-facilities">
+  <div class="container">
+    <h2 class="section-title">Upcoming Facilities</h2>
+    <div class="future-content">
+      <div class="future-text">
+        <h3>New Arts College Building</h3>
+        <p>We are excited to announce that construction of a new Arts college building is currently in progress. This modern facility will include:</p>
+        <ul>
+          <li>Spacious and well-equipped classrooms</li>
+          <li>Modern library with expanded collection</li>
+          <li>Computer lab for digital learning</li>
+          <li>Seminar hall for events and presentations</li>
+          <li>Staff rooms and administrative offices</li>
+          <li>Enhanced sanitation facilities</li>
+        </ul>
+        <h3>Proposed Science College</h3>
+        <p>Following the community's proposal, we are planning to establish a Science college that will feature:</p>
+        <ul>
+          <li>State-of-the-art science laboratories</li>
+          <li>Physics, Chemistry, and Biology labs</li>
+          <li>Computer science facilities</li>
+          <li>Modern equipment and apparatus</li>
+          <li>Dedicated science library</li>
+        </ul>
+      </div>
+      <div class="future-image">
+        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop" alt="Future Building" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,63 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Gallery</h1>
+    <p>Explore our school, facilities, and activities through photos and videos</p>
+  </div>
+</section>
+
+<section class="gallery-main">
+  <div class="container">
+    <div class="gallery-filters">
+      <button
+        *ngFor="let category of categories"
+        [class.active]="selectedCategory === category.id"
+        (click)="selectCategory(category.id)"
+        class="filter-btn">
+        {{ category.name }}
+      </button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let item of filteredItems" [class.video-item]="item.type === 'video'">
+        <div class="gallery-card" *ngIf="item.type === 'image'">
+          <div class="gallery-image">
+            <img [src]="item.src" [alt]="item.title" loading="lazy">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gallery-card video-card" *ngIf="item.type === 'video'">
+          <div class="video-wrapper">
+            <iframe
+              [src]="item.src"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-info">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Want to See More?</h2>
+      <p>Visit our campus to experience our facilities and vibrant learning environment firsthand.</p>
+      <a routerLink="/contact" class="btn btn-primary">Schedule a Visit</a>
+    </div>
+  </div>
+</section>
+

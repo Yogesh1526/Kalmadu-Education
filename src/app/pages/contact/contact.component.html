@@ -1,0 +1,151 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Get in touch with us - we'd love to hear from you</p>
+  </div>
+</section>
+
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>We're here to help and answer any questions you might have. We look forward to hearing from you.</p>
+        
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Address</h3>
+              <p>{{ contactInfo.address }}</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h3>Phone</h3>
+              <p>{{ contactInfo.phone }}</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p>{{ contactInfo.email }}</p>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <div class="info-icon">🕐</div>
+            <div class="info-content">
+              <h3>Office Hours</h3>
+              <p>{{ contactInfo.hours }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <h3>Find Us on Map</h3>
+          <div class="map-placeholder">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.1234567890123!2d75.12345678901234!3d20.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA3JzI0LjQiTiA3NcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="300"
+              style="border:0; border-radius: 12px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <h2>Send us a Message</h2>
+        <form (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              [(ngModel)]="contactForm.name"
+              required
+              placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="contactForm.email"
+              required
+              placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              [(ngModel)]="contactForm.phone"
+              placeholder="Enter your phone number">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              [(ngModel)]="contactForm.subject"
+              required
+              placeholder="What is this regarding?">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              [(ngModel)]="contactForm.message"
+              required
+              rows="6"
+              placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quick-links">
+  <div class="container">
+    <h2>Quick Links</h2>
+    <div class="links-grid">
+      <a routerLink="/about" class="quick-link-card">
+        <div class="link-icon">ℹ️</div>
+        <h3>About Us</h3>
+        <p>Learn more about our school and mission</p>
+      </a>
+      <a routerLink="/facilities" class="quick-link-card">
+        <div class="link-icon">🏫</div>
+        <h3>Facilities</h3>
+        <p>Explore our infrastructure and amenities</p>
+      </a>
+      <a routerLink="/gallery" class="quick-link-card">
+        <div class="link-icon">📸</div>
+        <h3>Gallery</h3>
+        <p>View photos and videos of our campus</p>
+      </a>
+    </div>
+  </div>
+</section>
+

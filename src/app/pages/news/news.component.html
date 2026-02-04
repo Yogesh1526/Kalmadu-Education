@@ -1,0 +1,39 @@
+<section class="page-header">
+  <div class="container">
+    <h1>News & Updates</h1>
+    <p>Stay informed about the latest happenings at our school</p>
+  </div>
+</section>
+
+<section class="news-main">
+  <div class="container">
+    <div class="news-grid">
+      <div class="news-card" *ngFor="let news of newsItems" (click)="openNewsDetail(news)">
+        <div class="news-image">
+          <img [src]="news.image" [alt]="news.title" loading="lazy">
+          <div class="news-category">{{ news.category }}</div>
+        </div>
+        <div class="news-content">
+          <div class="news-date">{{ news.date | date:'MMM d, yyyy' }}</div>
+          <h3>{{ news.title }}</h3>
+          <p>{{ news.excerpt }}</p>
+          <a class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="news-modal" *ngIf="selectedNews" (click)="closeNewsDetail()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeNewsDetail()">×</button>
+    <img [src]="selectedNews.image" [alt]="selectedNews.title" class="modal-image">
+    <div class="modal-body">
+      <div class="modal-date">{{ selectedNews.date | date:'MMMM d, yyyy' }}</div>
+      <div class="modal-category">{{ selectedNews.category }}</div>
+      <h2>{{ selectedNews.title }}</h2>
+      <p>{{ selectedNews.content }}</p>
+    </div>
+  </div>
+</div>
+

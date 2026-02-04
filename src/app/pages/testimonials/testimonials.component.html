@@ -1,0 +1,30 @@
+<section class="page-header">
+  <div class="container">
+    <h1>Testimonials</h1>
+    <p>What our students, parents, and community say about us</p>
+  </div>
+</section>
+
+<section class="testimonials-main">
+  <div class="container">
+    <div class="testimonials-grid">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-content">
+          <div class="quote-icon">"</div>
+          <p class="testimonial-text">{{ testimonial.text }}</p>
+          <div class="rating">
+            <span *ngFor="let star of [1,2,3,4,5]" class="star">⭐</span>
+          </div>
+        </div>
+        <div class="testimonial-author">
+          <img [src]="testimonial.image" [alt]="testimonial.name" class="author-image">
+          <div class="author-info">
+            <h3>{{ testimonial.name }}</h3>
+            <p class="author-role">{{ testimonial.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
